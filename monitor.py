@@ -62,7 +62,7 @@ def extract_claims(data: dict) -> dict:
     Returns a flat dict keyed by "<setId>::::<markerId>".
     """
     claims = {}
-    marker_sets = data.get("markerSets", {})
+    marker_sets = data
 
     for set_id, marker_set in marker_sets.items():
         if WATCH_SETS:
