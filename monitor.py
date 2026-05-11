@@ -217,7 +217,7 @@ def main() -> None:
     removed = {k: v for k, v in previous.items() if k not in current}
     added   = {k: v for k, v in current.items()  if k not in previous}
 
-    if not removed and not added:
+    if not removed:
         print("✅ No changes detected.")
         save_state(current)
         return
@@ -227,11 +227,6 @@ def main() -> None:
         pos = claim["position"]
         print(f"  🔴 REMOVED: {claim['label']}  |  {pos_str(pos)}")
         embeds.append(build_embed(claim, "removed"))
-
-    for claim in added.values():
-        pos = claim["position"]
-        print(f"  🟢 ADDED:   {claim['label']}  |  {pos_str(pos)}")
-        embeds.append(build_embed(claim, "added"))
 
     # Discord allows max 10 embeds per message
     for i in range(0, len(embeds), 10):
