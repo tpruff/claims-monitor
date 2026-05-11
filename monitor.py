@@ -10,9 +10,9 @@ STATE_FILE   = "state.json"
 
 # BlueMap exposes marker data at /maps/<map-id>/markers.json
 # Update MAP_ID if you are watching a different world
-MAP_ID       = "abex"
+MAP_ID       = "abexilas"
 BASE_URL     = "https://map.stoneworks.gg"
-MARKERS_URL  = f"{BASE_URL}/maps/{MAP_ID}/markers.json"
+MARKERS_URL  = f"{BASE_URL}/abex//maps/{MAP_ID}/live/markers.json"
 
 # Only watch specific marker-set IDs (case-insensitive substring match).
 # Leave empty [] to watch ALL marker sets.
